@@ -1,0 +1,16 @@
+@use "constants.scss";
+
+html,
+body {
+  font-family: 'General Sans', sans-serif;
+  color: constants.$text-dark-theme-color;
+  background-color: constants.$background-dark-theme-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+span {
+  //vertical-align: 1px;
+}

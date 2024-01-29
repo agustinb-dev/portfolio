@@ -1,0 +1,6 @@
+@use "../../../styles/functions.scss";
+@use "../../../styles/constants.scss";
+
+.button-normal {
+    background-color: constants.$main-color;
+}

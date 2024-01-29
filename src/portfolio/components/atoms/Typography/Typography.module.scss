@@ -1,0 +1,25 @@
+@use "../../../styles/mixins.scss";
+
+.typography {
+  margin: 0;
+
+  &.variant-normal {
+    @include mixins.font-size-variant(0.85);
+
+    &.style-italic {
+      font-style: italic;
+    }
+
+    @include mixins.font-weights();
+  }
+
+  &.variant-title {
+    @include mixins.font-size-variant(4.4);
+
+    &.style-italic {
+      font-style: italic;
+    }
+
+    @include mixins.font-weights();
+  }
+}

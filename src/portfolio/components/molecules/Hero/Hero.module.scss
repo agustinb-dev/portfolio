@@ -1,0 +1,34 @@
+@use "../../../styles/constants.scss";
+@use "../../../styles/mixins.scss";
+@use "../../../styles/functions.scss";
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    margin-top: -(constants.$header-height);
+
+    &:nth-child(1) {
+        line-height: 1.1;
+    }
+
+    &:nth-child(2) {
+        line-height: 1;
+    }
+
+    .sub-title {
+        color: constants.$main-color;
+    }
+
+    .hero-buttons {
+        margin-top: functions.spacing(1);
+        display: flex;
+
+        & a {
+            margin: functions.spacing(0.625);
+            padding: functions.spacing(1.25);
+        }
+    }
+}

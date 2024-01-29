@@ -1,0 +1,41 @@
+@use "constants.scss";
+
+@mixin box-shadow() {
+  box-shadow:0 10px 20px rgb(27, 120, 226, 0.5),0 6px 6px rgb(27, 120, 226, 0.5),0 0 100px -10px constants.$main-color;
+  -webkit-box-shadow:0 10px 20px rgb(27, 120, 226, 0.5),0 6px 6px rgb(27, 120, 226, 0.5),0 0 100px -10px constants.$main-color;
+  -moz-box-shadow:0 10px 20px rgb(27, 120, 226, 0.5),0 6px 6px rgb(27, 120, 226, 0.5),0 0 100px -10px constants.$main-color;
+}
+
+@mixin box-shadow-hover() {
+  box-shadow:0 14px 28px rgb(27, 120, 226, 0.25),0 10px 10px rgb(27, 120, 226, 0.22),0 0 120px -10px constants.$main-color;
+  -webkit-box-shadow:0 14px 28px rgb(27, 120, 226, 0.25),0 10px 10px rgb(27, 120, 226, 0.22),0 0 120px -10px constants.$main-color;
+  -moz-box-shadow:0 14px 28px rgb(27, 120, 226, 0.25),0 10px 10px rgb(27, 120, 226, 0.22),0 0 120px -10px constants.$main-color;
+}
+
+@mixin font-size-variant($coefficient) {
+  &.small {
+    font-size: #{$coefficient * 0.57}rem;
+  }
+
+  &.normal {
+    font-size: #{$coefficient}rem;
+  }
+
+  &.large {
+    font-size: #{$coefficient * 1.2}rem;
+  }
+}
+
+@mixin font-weights() {
+  &.weight-normal {
+    font-weight: 400;
+  }
+
+  &.weight-semi-bold {
+    font-weight: 600;
+  }
+
+  &.weight-bold {
+    font-weight: 700;
+  }
+}

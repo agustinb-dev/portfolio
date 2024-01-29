@@ -1,0 +1,23 @@
+// sizes
+$grid-size: 8px;
+$header-height: 100px;
+$radius: 6px;
+
+// colors
+$main-color: #1b78e2; // rgb(27, 120, 226)
+$main-darker-color: #0e325f;
+$text-dark-theme-color: #ffffff;
+$text-secondary-dark-theme-color: $main-color;
+$text-light-dark-theme-color: #f1f5f9;
+$background-dark-theme-color: #070a13;
+$background-secondary-dark-theme-color: #0f1118;
+
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px, // 768px or less needs mobile layout
+        lg: 1024px,
+        xl: 1280px,
+        xxl: 1536px,
+);

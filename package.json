@@ -13,24 +13,47 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint:code": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint:code:fix": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:style": "stylelint \"**/*.scss\"",
+    "lint:style:fix": "stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
     "gatsby": "^5.13.2",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sass": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "sass": "^1.70.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "classnames": "^2.5.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-sonarjs": "^0.23.0",
+    "eslint-plugin-unicorn": "^50.0.1",
+    "eslint-webpack-plugin": "^4.0.1",
+    "gatsby-plugin-eslint": "^4.0.4",
+    "prettier": "^3.2.4",
+    "prettier-eslint": "^16.3.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^16.2.0",
+    "stylelint-config-standard-scss": "^13.0.0",
     "typescript": "^5.3.3"
   }
 }

@@ -1,0 +1,39 @@
+@use "../../../styles/functions.scss";
+@use "../../../styles/constants.scss";
+@use "../../../styles/mixins.scss";
+
+.anchor-normal {
+  text-decoration: none;
+  color: constants.$text-dark-theme-color;
+  transition: 0.2s ease-in-out;
+
+  &:visited {
+    color: constants.$text-dark-theme-color;
+  }
+
+  &:hover {
+      color: constants.$main-color;
+  }
+
+  &:focus-visible {
+    color: constants.$main-color;
+  }
+}
+
+.anchor-button {
+  background-color: constants.$main-color;
+  color: constants.$text-light-dark-theme-color;
+  padding: functions.spacing(1) functions.spacing(1.5);
+  border-radius: constants.$radius;
+  @include mixins.box-shadow();
+
+  &:hover {
+    color: inherit;
+    transform: translateY(-5px);
+    @include mixins.box-shadow-hover();
+  }
+
+  &:focus-visible {
+    color: inherit;
+  }
+}
