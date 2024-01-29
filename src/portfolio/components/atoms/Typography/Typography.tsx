@@ -27,10 +27,6 @@ export function Typography({ Component, size, variant, children, style, weight }
 		[styles.weightBold]: weight === "bold",
 	};
 
-	console.log(styleStyles);
-
-	console.log(variantStyles);
-
 	return (
 		<Component className={cls(styles.typography, `${Object.keys(variantStyles).find(key => variantStyles[key])}`, styles[size], `${Object.keys(styleStyles).find(key => styleStyles[key])}`, `${Object.keys(weightStyles).find(key => weightStyles[key])}`)}>
 			{children}
