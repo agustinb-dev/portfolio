@@ -4,3 +4,31 @@
 .button-normal {
     background-color: constants.$main-color;
 }
+
+.button-square {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: functions.spacing(2.5) functions.spacing(2);
+    color: constants.$text-dark-theme-color;
+
+    &:hover {
+        background-color: constants.$main-darker-color;
+    }
+
+    &:focus-visible {
+        background-color: constants.$main-darker-color;
+    }
+
+    &[data-active="true"] {
+        background-color: constants.$main-color;
+
+        &:hover {
+            background-color: constants.$main-darker-color;
+        }
+
+        &:focus-visible {
+            background-color: constants.$main-darker-color;
+        }
+    }
+}

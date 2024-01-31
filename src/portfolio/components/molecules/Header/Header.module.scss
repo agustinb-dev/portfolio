@@ -37,6 +37,7 @@ $number-of-nav-li-elements: 3;
           }
         }
       }
+
       & li {
         & a {
           padding: 10px;
@@ -47,9 +48,6 @@ $number-of-nav-li-elements: 3;
 
     .resume-button {
         margin-left: functions.spacing(1);
-        & span {
-          //vertical-align: 1px;
-        }
     }
   }
 }

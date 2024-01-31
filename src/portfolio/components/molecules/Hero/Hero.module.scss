@@ -9,6 +9,7 @@
     justify-content: center;
     height: 100svh;
     margin-top: -(constants.$header-height);
+    white-space: nowrap;
 
     &:nth-child(1) {
         line-height: 1.1;

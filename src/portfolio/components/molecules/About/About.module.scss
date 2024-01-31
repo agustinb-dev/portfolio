@@ -1,0 +1,128 @@
+@use "../../../styles/functions";
+@use "../../../styles/constants";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
+
+.about-container {
+    display: flex;
+    width: 75%;
+    margin: functions.spacing(13) auto functions.spacing(15);
+    position: relative;
+
+    @media (max-width: $lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-buttons {
+        display: flex;
+        position: absolute;
+        top: -91px;
+        right: 0;
+    }
+
+    .image {
+        flex-grow: 1;
+        width: 450px;
+        margin-top: functions.spacing(4.5);
+
+        @media (min-width: $xxl) {
+            text-align: center;
+        };
+
+        @media (max-width: $xxl) {
+            text-align: right;
+        }
+
+        @media (max-width: $xl) {
+            margin-left: functions.spacing(2);
+        }
+
+        @media (max-width: $lg) {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        img {
+            transform: rotateY(180deg);
+        }
+    }
+
+    .about-text-container {
+        max-width: 966px;
+        min-width: 387px;
+
+        .about-me {
+            text-align: left;
+        }
+
+        .description {
+            margin-top: functions.spacing(4);
+            line-height: 1.4;
+            text-align: justify;
+        }
+
+    }
+}
+
+.horizontal-line {
+    border:1px solid constants.$main-color;
+    margin-top: functions.spacing(3);
+    margin-bottom: functions.spacing(3);
+    opacity: 0.8;
+}
+
+.technologies-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: functions.spacing(2);
+
+    .technologies {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: functions.spacing(1);
+        width: 100%;
+
+        @media (max-width: $lg) {
+            justify-content: space-between;
+            width: 60%;
+        }
+
+        @media (max-width: $md) {
+            width: 70%;
+        }
+
+        @media (max-width: $sm) {
+            width: 80%;
+        }
+
+        & ul {
+            list-style: none;
+            white-space: nowrap;
+            padding: 0;
+
+            & li {
+                margin-bottom: functions.spacing(2);
+                margin-right: functions.spacing(20);
+
+                @media  (max-width: $lg) {
+                    margin-right: 0;
+                }
+            }
+
+            & li::before {
+                content: "❱";
+                margin-right: functions.spacing(1);
+                color: constants.$main-color;
+            }
+        }
+    }
+}
+
