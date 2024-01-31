@@ -8,8 +8,8 @@ interface HeroProperties {
 
 export function Hero(properties: HeroProperties) {
 	return (
-		<section>
-			<div className={styles.heroContainer}>
+		<>
+			<section className={styles.heroContainer}>
 				<Typography variant={"title"} size={"large"} style={"italic"} weight={"bold"} Component={"h1"}>
 					AGUSTIN BARCIA
 				</Typography>
@@ -30,7 +30,7 @@ export function Hero(properties: HeroProperties) {
 						</Typography>
 					</AnchorButton>
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }

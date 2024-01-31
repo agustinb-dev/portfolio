@@ -11,7 +11,7 @@ interface AboutProperties {
 export function About(properties: AboutProperties) {
 	return (
 		<>
-			<div className={styles.aboutContainer}>
+			<section className={styles.aboutContainer}>
 				<div className={styles.languageButtons}>
 					<ButtonSquare active={properties.activeLanguage === "es"}
 								  onClick={() => properties.handleLanguageButtonClick("es")}>
@@ -41,8 +41,7 @@ export function About(properties: AboutProperties) {
 								I&#39;m motivated to continue learning and gaining experience in the professional
 								field.<br/><br/>
 								I believe that being a Full Stack developer means not being afraid of challenges and
-								have thea
-								ability to continually learn to tackle new projects more efficiently.
+								have the ability to continually learn to tackle new projects more efficiently.
 							</Typography>
 						) : (<Typography Component={"p"} variant={"normal"} size={"large"}>
 							Mi nombre es Agustin Barcia, tengo 26 años, soy un estudiante en la carrera de ingeniería en
@@ -83,7 +82,7 @@ export function About(properties: AboutProperties) {
 					>
 					</StaticImage>
 				</div>
-			</div>
+			</section>
 		</>
 	);
 }
