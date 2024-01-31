@@ -2,7 +2,11 @@ import React from "react";
 import * as styles from "./Hero.module.scss";
 import { AnchorButton, Typography } from "../../atoms";
 
-export function Hero() {
+interface HeroProperties {
+	activeLanguage: string;
+}
+
+export function Hero(properties: HeroProperties) {
 	return (
 		<section>
 			<div className={styles.heroContainer}>
@@ -16,10 +20,14 @@ export function Hero() {
 				</div>
 				<div className={styles.heroButtons}>
 					<AnchorButton href={"/#resume"}>
-						<Typography style={"italic"} weight={"bold"}>DOWNLOAD CV</Typography>
+						<Typography style={"italic"} weight={"bold"} variant={"info"}>
+							{properties.activeLanguage === "en" ? "DOWNLOAD CV" : "DESCARGAR CV" }
+						</Typography>
 					</AnchorButton>
 					<AnchorButton href={"/#contact"}>
-						<Typography style={"italic"} weight={"bold"}>CONTACT ME</Typography>
+						<Typography style={"italic"} weight={"bold"} variant={"info"}>
+							{properties.activeLanguage === "en" ? "CONTACT ME" : "CONTÁCTAME" }
+						</Typography>
 					</AnchorButton>
 				</div>
 			</div>

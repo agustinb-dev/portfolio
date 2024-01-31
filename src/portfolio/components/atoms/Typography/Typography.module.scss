@@ -1,25 +1,65 @@
 @use "../../../styles/mixins.scss";
+@use "../../../styles/constants.scss";
+
+$xxl: map-get(constants.$grid-breakpoints, xxl);
+$xl: map-get(constants.$grid-breakpoints, xl);
+$lg: map-get(constants.$grid-breakpoints, lg);
+$md: map-get(constants.$grid-breakpoints, md);
+$sm: map-get(constants.$grid-breakpoints, sm);
+$xs: map-get(constants.$grid-breakpoints, xs);
 
 .typography {
   margin: 0;
 
   &.variant-normal {
-    @include mixins.font-size-variant(0.85);
-
+    @include mixins.font-size-variant(1);
     &.style-italic {
       font-style: italic;
     }
-
     @include mixins.font-weights();
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(0.9);
+    }
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(0.8);
+    }
+  }
+
+  &.variant-info {
+    @include mixins.font-size-variant(0.85);
+    &.style-italic {
+      font-style: italic;
+    }
+    @include mixins.font-weights();
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(0.8);
+    }
+  }
+
+  &.variant-subtitle {
+    @include mixins.font-size-variant(3);
+    @include mixins.font-weights();
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(2.5);
+    }
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(2);
+    }
   }
 
   &.variant-title {
     @include mixins.font-size-variant(4.4);
-
     &.style-italic {
       font-style: italic;
     }
-
     @include mixins.font-weights();
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(3.3);
+    }
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(2.5);
+    }
   }
 }

@@ -14,3 +14,12 @@ body {
 span {
   //vertical-align: 1px;
 }
+
+::-webkit-scrollbar{
+  width: constants.$scrollbar-width;
+}
+
+::-webkit-scrollbar-thumb{
+  background: constants.$main-color;
+  border-radius: 10px;
+}

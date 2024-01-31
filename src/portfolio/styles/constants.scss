@@ -2,6 +2,7 @@
 $grid-size: 8px;
 $header-height: 100px;
 $radius: 6px;
+$scrollbar-width: 9px;
 
 // colors
 $main-color: #1b78e2; // rgb(27, 120, 226)
@@ -17,7 +18,7 @@ $grid-breakpoints: (
         xs: 0,
         sm: 576px,
         md: 768px, // 768px or less needs mobile layout
-        lg: 1024px,
-        xl: 1280px,
+        lg: 1024px, // Change to vertical focused layout
+        xl: 1280px, // Downscale fonts and images if necessary
         xxl: 1536px,
 );
