@@ -25,12 +25,14 @@
   color: constants.$text-light-dark-theme-color;
   padding: functions.spacing(1) functions.spacing(1.5);
   border-radius: constants.$radius;
-  @include mixins.box-shadow();
+
+  @include mixins.box-shadow;
 
   &:hover {
     color: inherit;
     transform: translateY(-5px);
-    @include mixins.box-shadow-hover();
+
+    @include mixins.box-shadow-hover;
   }
 
   &:focus-visible {

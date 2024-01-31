@@ -1,19 +1,19 @@
 @use "../../../styles/functions";
 @use "../../../styles/constants";
+@use "sass:map";
 
-$xxl: map-get(constants.$grid-breakpoints, xxl);
-$xl: map-get(constants.$grid-breakpoints, xl);
-$lg: map-get(constants.$grid-breakpoints, lg);
-$md: map-get(constants.$grid-breakpoints, md);
-$sm: map-get(constants.$grid-breakpoints, sm);
-$xs: map-get(constants.$grid-breakpoints, xs);
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
 
-.aboutContainer {
+.about-container {
     display: flex;
     width: 75%;
     margin: functions.spacing(13) auto functions.spacing(15);
     position: relative;
-    //flex-direction: column;
 
     @media (max-width: $lg) {
         flex-direction: column;
@@ -38,6 +38,10 @@ $xs: map-get(constants.$grid-breakpoints, xs);
 
         @media (max-width: $xxl) {
             text-align: right;
+        }
+
+        @media (max-width: $xl) {
+            margin-left: functions.spacing(2);
         }
 
         @media (max-width: $lg) {
@@ -71,7 +75,7 @@ $xs: map-get(constants.$grid-breakpoints, xs);
     border:1px solid constants.$main-color;
     margin-top: functions.spacing(3);
     margin-bottom: functions.spacing(3);
-    opacity: 80%;
+    opacity: 0.8;
 }
 
 .technologies-container {
@@ -107,6 +111,7 @@ $xs: map-get(constants.$grid-breakpoints, xs);
             & li {
                 margin-bottom: functions.spacing(2);
                 margin-right: functions.spacing(20);
+
                 @media  (max-width: $lg) {
                     margin-right: 0;
                 }
