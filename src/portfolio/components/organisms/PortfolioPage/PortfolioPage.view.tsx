@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Hero, About } from "../../molecules";
 import { usePortfolioPageHook } from "./PortfolioPage.hook";
+import { ProjectsSectionView } from "../ProjectsSection/ProjectsSection.view";
 
 
 export function PortfolioPageView() {
@@ -11,6 +12,7 @@ export function PortfolioPageView() {
 			<Header activeLanguage={activeLanguage}/>
 			<Hero activeLanguage={activeLanguage}/>
 			<About activeLanguage={activeLanguage} handleLanguageButtonClick={handleLanguageButtonClick}/>
+			<ProjectsSectionView />
 		</>
 	);
 }

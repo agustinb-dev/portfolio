@@ -19,12 +19,12 @@ export function Hero(properties: HeroProperties) {
 					</Typography>
 				</div>
 				<div className={styles.heroButtons}>
-					<AnchorButton href={"/#resume"}>
+					<AnchorButton href={"/#resume"} size={"large"}>
 						<Typography style={"italic"} weight={"bold"} variant={"info"}>
 							{properties.activeLanguage === "en" ? "DOWNLOAD CV" : "DESCARGAR CV" }
 						</Typography>
 					</AnchorButton>
-					<AnchorButton href={"/#contact"}>
+					<AnchorButton href={"/#contact"} size={"large"}>
 						<Typography style={"italic"} weight={"bold"} variant={"info"}>
 							{properties.activeLanguage === "en" ? "CONTACT ME" : "CONTÁCTAME" }
 						</Typography>

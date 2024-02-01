@@ -77,7 +77,7 @@ export function About(properties: AboutProperties) {
 				</div>
 				<div className={styles.image}>
 					<StaticImage alt={"face photo"}
-								 src={"../../../../images/me.png"}
+								 src={"../../../../images/PortfolioImages/me.png"}
 								 width={200}
 					>
 					</StaticImage>

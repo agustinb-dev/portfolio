@@ -23,10 +23,18 @@ const config: GatsbyConfig = {
 		{
 			resolve: "gatsby-source-filesystem",
 			options: {
-				"name": "images",
-				"path": "./src/images/"
+				"name": "PortfolioImages",
+				"path": "./src/images/PortfolioImages/"
 			},
-			__key: "images"
+			__key: "PortfolioImages"
+		},
+		{
+			resolve: "gatsby-source-filesystem",
+			options: {
+				name: "ProjectsImages",
+				path: "./src/images/ProjectsImages/",
+			},
+			__key: "ProjectsImages",
 		},
 		{
 			resolve: "gatsby-plugin-google-gtag",
@@ -39,7 +47,7 @@ const config: GatsbyConfig = {
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
-				"icon": "src/images/icon.png"
+				"icon": "src/images/PortfolioImages/icon.png"
 			}
 		},
 		{

@@ -23,10 +23,21 @@
 .anchor-button {
   background-color: constants.$main-color;
   color: constants.$text-light-dark-theme-color;
-  padding: functions.spacing(1) functions.spacing(1.5);
   border-radius: constants.$radius;
 
   @include mixins.box-shadow;
+
+  &.small {
+    padding: functions.spacing(1) functions.spacing(1.5);
+  }
+
+  &.normal {
+    padding: functions.spacing(1.6) functions.spacing(2.6);
+  }
+
+  &.large {
+    padding: functions.spacing(2.2) functions.spacing(2.3);
+  }
 
   &:hover {
     color: inherit;

@@ -1,0 +1,51 @@
+@use "../../../styles/functions.scss";
+@use "../../../styles/constants.scss";
+
+.project {
+  display: flex;
+  justify-content: space-evenly;
+
+  .image-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: constants.$main-color;
+      opacity: 0.4;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: opacity 0.3s;
+    }
+
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+
+  .project-info-container {
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: functions.spacing(1);
+    padding-right: functions.spacing(1);
+    max-width: 500px;
+    min-width: 500px;
+
+    .project-title {
+      margin-bottom: functions.spacing(2);
+    }
+
+    .project-description {
+      margin-bottom: functions.spacing(2);
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+  }
+}

@@ -32,7 +32,7 @@ export function Header(properties: HeaderProperties) {
 						</Anchor>
 					</li>
 				</ol>
-				<AnchorButton href={"/#resume"} className={styles.resumeButton}>
+				<AnchorButton href={"/#resume"} className={styles.resumeButton} size={"small"}>
 					<Typography Component={"span"} weight={"semi-bold"}>
 						{properties.activeLanguage === "en" ? "Resume" : "Curriculum"}
 					</Typography>
