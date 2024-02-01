@@ -1,12 +1,32 @@
 @use "../../../styles/functions.scss";
 @use "../../../styles/constants.scss";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
 
 .projects-section-container {
     display: flex;
-    width: 75%;
+    max-width: 1536px;
     flex-direction: column;
     align-items: center;
     margin: auto auto functions.spacing(12);
+
+    @media (max-width: $xxl) {
+        max-width: $xl;
+    }
+
+    @media (max-width: $xl) {
+        max-width: $lg;
+    }
+
+    @media (max-width: $lg) {
+        max-width: $md;
+    }
 
     .projects-section-header {
         margin-bottom: functions.spacing(5);
@@ -28,6 +48,5 @@
     .projects-container {
         display: flex;
         flex-direction: column;
-        max-width: 1064px;
     }
 }

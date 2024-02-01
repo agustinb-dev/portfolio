@@ -1,29 +1,58 @@
 @use "../../../styles/functions.scss";
 @use "../../../styles/constants.scss";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
+
+%image-wrapper-after {
+  &::after {
+    content: "";
+    background-color: constants.$main-color;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: opacity 0.3s;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+  }
+}
 
 .project {
   display: flex;
   justify-content: space-evenly;
 
+  @media (max-width: $sm+64) {
+    display: none;
+  }
+
   .image-wrapper {
     position: relative;
+    width: 591px;
 
-    &::after {
-      content: "";
-      background-color: constants.$main-color;
-      opacity: 0.4;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      transition: opacity 0.3s;
+    @media (max-width: $xxl) {
+      width: 505px;
     }
 
-    &:hover::after {
-      opacity: 0.3;
+    @media (max-width: $lg) {
+      width: 376px;
     }
+
+    @media (max-width: $md) {
+      width: 312px;
+    }
+
+    @extend %image-wrapper-after;
   }
 
   .project-info-container {
@@ -35,8 +64,23 @@
     justify-content: center;
     padding-left: functions.spacing(1);
     padding-right: functions.spacing(1);
-    max-width: 500px;
-    min-width: 500px;
+    max-width: 591px;
+    min-width: 591px;
+
+    @media (max-width: $xxl) {
+      min-width: 500px;
+      max-width: 505px;
+    }
+
+    @media (max-width: $lg) {
+      min-width: 376px;
+      max-width: 376px;
+    }
+
+    @media (max-width: $md) {
+      min-width: 312px;
+      max-width: 312px;
+    }
 
     .project-title {
       margin-bottom: functions.spacing(2);
@@ -44,6 +88,46 @@
 
     .project-description {
       margin-bottom: functions.spacing(2);
+      letter-spacing: 1px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.project-mobile {
+  display: none;
+
+  @media (max-width: $sm+64) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-title-mobile {
+    margin-bottom: functions.spacing(4);
+  }
+
+  .image-wrapper-mobile {
+    width: 459px;
+    position: relative;
+
+    @extend %image-wrapper-after;
+  }
+
+  .project-info-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 459px;
+    max-width: 459px;
+    margin-top: functions.spacing(4);
+    margin-bottom: functions.spacing(12);
+
+    .project-description-mobile {
+      text-align: center;
+      margin-bottom: functions.spacing(3.5);
       letter-spacing: 1px;
       line-height: 1.5;
     }

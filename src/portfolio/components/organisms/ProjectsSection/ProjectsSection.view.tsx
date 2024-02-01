@@ -4,11 +4,10 @@ import React from "react";
 import * as styles from "./ProjectsSection.module.scss";
 import { Typography } from "../../atoms";
 import { ProjectShowcase } from "../../molecules";
-import {  useProjectsSectionHook } from "./ProjectsSection.hook";
+import { useProjectsSectionHook } from "./ProjectsSection.hook";
 
 export function ProjectsSectionView() {
 	const { data, projects } = useProjectsSectionHook();
-
 	return (
 		<section className={styles.projectsSectionContainer}>
 			<div className={styles.projectsSectionHeader}>
@@ -27,8 +26,8 @@ export function ProjectsSectionView() {
 			<div className={styles.projectsContainer}>
 				{projects.map((project) => (
 					<ProjectShowcase
-						key={project.name}
-						imageData={data.allFile.edges.find(async (edge: { node: { relativePath: string; extension: string; }; }) => edge.node.relativePath === project.name+edge.node.extension)?.node.childImageSharp.gatsbyImageData}
+						key={project.title}
+						imageData={data.allFile.edges.find((edge: { node: { name: string; extension: string; }; }) => edge.node.name === project.imageName)?.node.childImageSharp.gatsbyImageData}
 						title={project.title}
 						description={project.description}
 						imageSide={project.imageSide}

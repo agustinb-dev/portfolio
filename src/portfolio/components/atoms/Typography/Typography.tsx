@@ -3,7 +3,7 @@ import * as styles from "./Typography.module.scss";
 import cls from "classnames";
 
 interface TypographyProperties {
-	size: "small" | "normal" | "large";
+	size: "extra-small" | "small" | "normal" | "large";
 	Component: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
 	variant?: "normal" | "subtitle" | "title" | "info";
 	style: "normal" | "italic";

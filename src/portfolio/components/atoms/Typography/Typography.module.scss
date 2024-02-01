@@ -42,6 +42,10 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     @media (max-width: $md) {
       @include mixins.font-size-variant(0.8);
     }
+
+    @media (max-width: $sm+64) {
+      @include mixins.font-size-variant(0.7);
+    }
   }
 
   &.variant-subtitle {

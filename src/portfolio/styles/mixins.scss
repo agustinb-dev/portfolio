@@ -9,6 +9,10 @@
 }
 
 @mixin font-size-variant($coefficient) {
+  &.extra-small {
+    font-size: #{$coefficient * 0.4}rem;
+  }
+
   &.small {
     font-size: #{$coefficient * 0.57}rem;
   }

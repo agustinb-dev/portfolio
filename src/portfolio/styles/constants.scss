@@ -21,5 +21,5 @@ $grid-breakpoints: (
         md: 768px, // 768px or less needs mobile layout
         lg: 1024px, // Change to vertical focused layout
         xl: 1280px, // Downscale fonts and images if necessary
-        xxl: 1536px,
+        xxl: 1536px, // downscale large images and boxes if necessary
 );
