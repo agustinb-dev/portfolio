@@ -35,7 +35,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 						</Typography>
 					</div>
 					<AnchorButton href={properties.websiteUrl} size={vw < 1024 ? "small" : "normal"}>
-						<Typography weight={"bold"} size={vw < 1024 ? "normal" : "large"}>Website</Typography>
+						<Typography weight={"semi-bold"} size={vw < 1024 ? "normal" : "large"}>Website</Typography>
 					</AnchorButton>
 				</div>
 				{properties.imageSide === "right" && <div className={styles.imageWrapper}>
@@ -60,7 +60,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 						</Typography>
 					</div>
 					<AnchorButton href={properties.websiteUrl} size={"small"}>
-						<Typography variant={"normal"} size={"normal"} weight={"bold"} >Website</Typography>
+						<Typography weight={"semi-bold"} >Website</Typography>
 					</AnchorButton>
 				</div>
 			</div>

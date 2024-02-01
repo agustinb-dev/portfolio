@@ -18,8 +18,7 @@ export function ProjectsSectionView() {
 				</div>
 				<div className={styles.generalDescription}>
 					<Typography size={"large"}>
-						Mollit pariatur tempor nisi dolor non consequat magna cupidatat reprehenderit.
-						Aliquip excepteur ullamco aliquip magna est et commodo deserunt ipsum.
+						Some of the things I&apos;ve made over the years.
 					</Typography>
 				</div>
 			</div>

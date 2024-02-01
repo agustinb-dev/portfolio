@@ -20,12 +20,12 @@ export function Hero(properties: HeroProperties) {
 				</div>
 				<div className={styles.heroButtons}>
 					<AnchorButton href={"/#resume"} size={"large"}>
-						<Typography style={"italic"} weight={"bold"} variant={"info"}>
+						<Typography style={"italic"} weight={"semi-bold"} variant={"info"}>
 							{properties.activeLanguage === "en" ? "DOWNLOAD CV" : "DESCARGAR CV" }
 						</Typography>
 					</AnchorButton>
 					<AnchorButton href={"/#contact"} size={"large"}>
-						<Typography style={"italic"} weight={"bold"} variant={"info"}>
+						<Typography style={"italic"} weight={"semi-bold"} variant={"info"}>
 							{properties.activeLanguage === "en" ? "CONTACT ME" : "CONTÁCTAME" }
 						</Typography>
 					</AnchorButton>
