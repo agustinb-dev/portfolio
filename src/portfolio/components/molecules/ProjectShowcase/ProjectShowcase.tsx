@@ -16,8 +16,6 @@ interface ProjectShowcaseProperties {
 export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 	const image = getImage(properties.imageData);
 	const { vw } = useViewport({});
-	console.log(vw);
-
 	return (
 		<>
 			{/*Desktop HTML structure*/}
@@ -32,7 +30,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 						</Typography>
 					</div>
 					<div className={styles.projectDescription}>
-						<Typography variant={"normal"} size={vw < 1578 ? "normal" : "large"}>
+						<Typography variant={"normal"} size={vw < 1280 ? "normal" : "large"}>
 							{properties.description}
 						</Typography>
 					</div>
