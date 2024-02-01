@@ -40,7 +40,7 @@ export function About(properties: AboutProperties) {
 								My orientation is Front-End, focused more than anything on Typescript.
 								I&#39;m motivated to continue learning and gaining experience in the professional
 								field.<br/><br/>
-								I believe that being a Full Stack developer means not being afraid of challenges and
+								I believe that being a Front-End developer means not being afraid of challenges and
 								have the ability to continually learn to tackle new projects more efficiently.
 							</Typography>
 						) : (<Typography Component={"p"} variant={"normal"} size={"large"}>
