@@ -11,7 +11,7 @@ export function ProjectsSectionView() {
 	return (
 		<section className={styles.projectsSectionContainer}>
 			<div className={styles.projectsSectionHeader}>
-				<div className={styles.title}>
+				<div className={styles.generalTitle}>
 					<Typography Component={"h2"} variant={"subtitle"} weight={"bold"} size={"normal"}>
 						Projects
 					</Typography>

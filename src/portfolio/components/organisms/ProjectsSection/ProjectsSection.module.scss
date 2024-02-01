@@ -34,7 +34,7 @@ $xs: map.get(constants.$grid-breakpoints, xs);
         flex-direction: column;
         align-items: center;
 
-        .title {
+        .general-title {
             text-align: center;
             margin-bottom: functions.spacing(4);
         }
@@ -42,6 +42,15 @@ $xs: map.get(constants.$grid-breakpoints, xs);
         .general-description {
             width: 50%;
             text-align: center;
+            min-width: 640px;
+
+            @media (max-width: $lg) {
+                min-width: 540px;
+            }
+
+            @media (max-width: $md) {
+                min-width: 440px;
+            }
         }
     }
 
