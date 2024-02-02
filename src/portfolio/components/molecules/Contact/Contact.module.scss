@@ -1,0 +1,17 @@
+@use "../../../styles/functions";
+@use "../../../styles/constants";
+
+.contact-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: functions.spacing(20);
+
+  .contactDescription {
+    width: auto;
+    min-width: auto;
+    text-align: center;
+    margin-top: functions.spacing(5);
+    margin-bottom: functions.spacing(5);
+  }
+}

@@ -4,7 +4,7 @@ import cls from "classnames";
 import { Anchor, AnchorProperties } from "./Anchor";
 
 interface AnchorButtonProperties extends AnchorProperties {
-	size: "thin" | "small" | "normal" | "large";
+	size: "mobile" | "thin" | "small" | "normal" | "large";
 }
 export function AnchorButton(properties: AnchorButtonProperties) {
 	const { className, size, ...rest } = properties;

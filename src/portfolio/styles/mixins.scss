@@ -10,11 +10,11 @@
 
 @mixin font-size-variant($coefficient) {
   &.extra-small {
-    font-size: #{$coefficient * 0.4}rem;
+    font-size: #{$coefficient * 0.675}rem;
   }
 
   &.small {
-    font-size: #{$coefficient * 0.57}rem;
+    font-size: #{$coefficient * 0.85}rem;
   }
 
   &.normal {
@@ -29,6 +29,10 @@
 @mixin font-weights() {
   &.weight-normal {
     font-weight: 400;
+  }
+
+  &.weight-medium {
+    font-weight: 500;
   }
 
   &.weight-semi-bold {

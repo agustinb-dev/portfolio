@@ -9,14 +9,15 @@ $main-color: #1b78e2; // rgb(27, 120, 226)
 $main-darker-color: #0e325f;
 $image-after-color: #4f46e5;
 $text-dark-theme-color: #fff;
-$text-secondary-dark-theme-color: #475569;
+$text-secondary-dark-theme-color: #94a3b8; // #94a3b8 #475569 #1e293n
 $text-light-dark-theme-color: #f1f5f9;
 $background-dark-theme-color: #070a13;
 $background-secondary-dark-theme-color: #0f1118;
 
 // breakpoints
 $grid-breakpoints: (
-        xs: 0,
+        xxs: 320px,
+        xs: 475px,
         sm: 576px,
         md: 768px, // 768px or less needs mobile layout
         lg: 1024px, // Change to vertical focused layout

@@ -8,6 +8,7 @@ $lg: map.get(constants.$grid-breakpoints, lg);
 $md: map.get(constants.$grid-breakpoints, md);
 $sm: map.get(constants.$grid-breakpoints, sm);
 $xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
 
 %image-wrapper-after {
   &::after {
@@ -112,6 +113,10 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     width: 459px;
     position: relative;
 
+    @media (max-width: $xs) {
+      width: 95%;
+    }
+
     @extend %image-wrapper-after;
   }
 
@@ -125,11 +130,22 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     margin-top: functions.spacing(4);
     margin-bottom: functions.spacing(12);
 
+    @media (max-width: $xs) {
+      min-width: 95%;
+      max-width: 95%;
+    }
+
+    //@media (max-width: $xxs) {
+    //  min-width: 240px;
+    //  max-width: 240px;
+    //}
+
     .project-description-mobile {
       text-align: center;
       margin-bottom: functions.spacing(3.5);
       letter-spacing: 1px;
       line-height: 1.5;
+
     }
   }
 }

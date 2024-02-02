@@ -14,7 +14,7 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     max-width: 1536px;
     flex-direction: column;
     align-items: center;
-    margin: auto auto functions.spacing(12);
+    margin: auto auto 0;
 
     @media (max-width: $xxl) {
         max-width: $xl;
@@ -28,6 +28,14 @@ $xs: map.get(constants.$grid-breakpoints, xs);
         max-width: $md;
     }
 
+    @media (max-width: $md) {
+        max-width: $sm+64;
+    }
+
+    @media (max-width: $xs) {
+        max-width: 100%;
+    }
+
     .projects-section-header {
         margin-bottom: functions.spacing(5);
         display: flex;
@@ -37,6 +45,7 @@ $xs: map.get(constants.$grid-breakpoints, xs);
         .general-title {
             text-align: center;
             margin-bottom: functions.spacing(4);
+
         }
 
         .general-description {
@@ -50,6 +59,10 @@ $xs: map.get(constants.$grid-breakpoints, xs);
 
             @media (max-width: $md) {
                 min-width: 440px;
+            }
+
+            @media (max-width: $xs) {
+                min-width: 95%;
             }
         }
     }
