@@ -1,5 +1,14 @@
 @use "../../../styles/functions";
 @use "../../../styles/constants";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
 
 .contact-section-container {
   display: flex;
@@ -12,10 +21,19 @@
   }
 
   .contactDescription {
-    width: auto;
-    min-width: auto;
+    padding-right: functions.spacing(1);
+    padding-left: functions.spacing(1);
+    max-width: $sm;
     text-align: center;
     margin-top: functions.spacing(5);
     margin-bottom: functions.spacing(5);
+
+    @media (max-width: $lg) {
+      max-width: $xs;
+    }
+
+    @media (max-width: $xs) {
+      max-width: $xxs;
+    }
   }
 }
