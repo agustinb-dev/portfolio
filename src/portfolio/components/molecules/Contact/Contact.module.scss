@@ -7,6 +7,10 @@
   align-items: center;
   margin-top: functions.spacing(20);
 
+  .contact-title {
+    white-space: nowrap;
+  }
+
   .contactDescription {
     width: auto;
     min-width: auto;

@@ -45,7 +45,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 			{/*Mobile HTML structure*/}
 			<div className={styles.projectMobile}>
 				<div className={styles.projectTitleMobile}>
-					<Typography variant={"subtitle"} size={"small"} weight={"bold"} Component={"h3"}>
+					<Typography variant={"subtitle"} size={vw < 475 ? "extraSmall" : "small"} weight={"bold"} Component={"h3"}>
 						{properties.title}
 					</Typography>
 				</div>
