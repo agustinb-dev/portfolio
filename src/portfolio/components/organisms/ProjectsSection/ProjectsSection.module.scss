@@ -29,7 +29,7 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     }
 
     @media (max-width: $md) {
-        max-width: $sm+64;
+        max-width: $sm + 64;
     }
 
     @media (max-width: $xs) {

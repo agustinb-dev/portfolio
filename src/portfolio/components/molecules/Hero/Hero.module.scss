@@ -36,6 +36,7 @@ $xs: map.get(constants.$grid-breakpoints, xs);
 
         & a {
             margin: functions.spacing(0.625);
+
             @media (max-width: $xs) {
                 margin: functions.spacing(0.3);
             }

@@ -8,7 +8,6 @@ $lg: map.get(constants.$grid-breakpoints, "lg");
 $md: map.get(constants.$grid-breakpoints, "md");
 $sm: map.get(constants.$grid-breakpoints, "sm");
 $xs: map.get(constants.$grid-breakpoints, "xs");
-
 $number-of-nav-li-elements: 3;
 
 .header {
@@ -32,7 +31,7 @@ $number-of-nav-li-elements: 3;
     padding-right: functions.spacing(2);
   }
 
-  .mobileNavButton {
+  .mobile-nav-button {
     display: none;
     padding: functions.spacing(0);
     z-index: 99;
@@ -114,7 +113,7 @@ $number-of-nav-li-elements: 3;
       gap: functions.spacing(4);
       align-items: center;
 
-      .mobileNavLine {
+      .mobile-nav-line {
         border: 1px solid constants.$text-secondary-dark-theme-color;
         opacity: 0.8;
         width: 40%;

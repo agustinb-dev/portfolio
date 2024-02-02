@@ -52,7 +52,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
       @include mixins.font-size-variant(0.8);
     }
 
-    @media (max-width: $sm+64) {
+    @media (max-width: $sm + 64) {
       @include mixins.font-size-variant(0.7);
     }
   }
