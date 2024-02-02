@@ -8,6 +8,7 @@ $lg: map.get(constants.$grid-breakpoints, lg);
 $md: map.get(constants.$grid-breakpoints, md);
 $sm: map.get(constants.$grid-breakpoints, sm);
 $xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
 
 .typography {
   margin: 0;
@@ -28,6 +29,14 @@ $xs: map.get(constants.$grid-breakpoints, xs);
     @media (max-width: $sm) {
       @include mixins.font-size-variant(0.8);
     }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(0.7);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(0.6);
+    }
   }
 
   &.variant-info {
@@ -41,6 +50,10 @@ $xs: map.get(constants.$grid-breakpoints, xs);
 
     @media (max-width: $md) {
       @include mixins.font-size-variant(0.8);
+    }
+
+    @media (max-width: $sm + 64) {
+      @include mixins.font-size-variant(0.7);
     }
   }
 
@@ -72,6 +85,14 @@ $xs: map.get(constants.$grid-breakpoints, xs);
 
     @media (max-width: $sm) {
       @include mixins.font-size-variant(2.5);
+    }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(1.75);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(1.4);
     }
   }
 }

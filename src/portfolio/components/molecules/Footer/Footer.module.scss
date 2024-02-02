@@ -1,0 +1,11 @@
+@use "../../../styles/functions";
+@use "../../../styles/constants";
+
+.footer {
+  text-align: center;
+  margin: functions.spacing(20) auto auto;
+  letter-spacing: .2em;
+  color: constants.$text-secondary-dark-theme-color;
+  opacity: 0.8;
+  padding-bottom: functions.spacing(1);
+}

@@ -8,16 +8,41 @@ $lg: map.get(constants.$grid-breakpoints, lg);
 $md: map.get(constants.$grid-breakpoints, md);
 $sm: map.get(constants.$grid-breakpoints, sm);
 $xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
+
 
 .about-container {
     display: flex;
-    width: 75%;
-    margin: functions.spacing(13) auto functions.spacing(15);
+    width: 1440px;
+    margin: functions.spacing(20) auto functions.spacing(0);
     position: relative;
+    padding-right: functions.spacing(1);
+    padding-left: functions.spacing(1);
+
+    @media (max-width: $xxl) {
+        width: $xl;
+    }
+
+    @media (max-width: $xl) {
+        width: $lg;
+    }
 
     @media (max-width: $lg) {
         flex-direction: column;
         align-items: center;
+        width: $md;
+    }
+
+    @media (max-width: $md) {
+        width: $sm;
+    }
+
+    @media (max-width: $sm) {
+        width: $xs;
+    }
+
+    @media (max-width: $xs) {
+        width: 90%;
     }
 
     .language-buttons {
@@ -31,21 +56,13 @@ $xs: map.get(constants.$grid-breakpoints, xs);
         flex-grow: 1;
         width: 450px;
         margin-top: functions.spacing(4.5);
-
-        @media (min-width: $xxl) {
-            text-align: center;
-        };
-
-        @media (max-width: $xxl) {
-            text-align: right;
-        }
+        text-align: center;
 
         @media (max-width: $xl) {
             margin-left: functions.spacing(2);
         }
 
         @media (max-width: $lg) {
-            text-align: center;
             margin-top: 0;
         }
 
@@ -56,7 +73,6 @@ $xs: map.get(constants.$grid-breakpoints, xs);
 
     .about-text-container {
         max-width: 966px;
-        min-width: 387px;
 
         .about-me {
             text-align: left;

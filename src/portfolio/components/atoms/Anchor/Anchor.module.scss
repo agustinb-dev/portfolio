@@ -1,6 +1,15 @@
 @use "../../../styles/functions.scss";
 @use "../../../styles/constants.scss";
 @use "../../../styles/mixins.scss";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
 
 .anchor-normal {
   text-decoration: none;
@@ -23,10 +32,25 @@
 .anchor-button {
   background-color: constants.$main-color;
   color: constants.$text-light-dark-theme-color;
-  padding: functions.spacing(1) functions.spacing(1.5);
   border-radius: constants.$radius;
 
   @include mixins.box-shadow;
+
+  &.thin {
+    padding: functions.spacing(1) functions.spacing(1.5);
+  }
+
+  &.small {
+    padding: functions.spacing(1.5) functions.spacing(1.8);
+  }
+
+  &.normal {
+    padding: functions.spacing(1.5) functions.spacing(1.6);
+  }
+
+  &.large {
+    padding: functions.spacing(2.25) functions.spacing(1.75);
+  }
 
   &:hover {
     color: inherit;
