@@ -4,7 +4,7 @@ import { PortfolioPageView } from "../portfolio/components/organisms/PortfolioPa
 
 export function Portfolio() {
 	return (
-		<div className={styles.page}>
+		<div className={styles.page} id={"portfolioPage"}>
 			<PortfolioPageView/>
 		</div>
 	);

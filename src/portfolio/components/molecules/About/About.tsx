@@ -11,7 +11,7 @@ interface AboutProperties {
 export function About(properties: AboutProperties) {
 	return (
 		<>
-			<section className={styles.aboutContainer}>
+			<section className={styles.aboutContainer} id={"about"}>
 				<div className={styles.languageButtons}>
 					<ButtonSquare active={properties.activeLanguage === "es"}
 								  onClick={() => properties.handleLanguageButtonClick("es")}>

@@ -9,7 +9,7 @@ import { useProjectsSectionHook } from "./ProjectsSection.hook";
 export function ProjectsSectionView() {
 	const { data, projects } = useProjectsSectionHook();
 	return (
-		<section className={styles.projectsSectionContainer}>
+		<section className={styles.projectsSectionContainer} id={"work"}>
 			<div className={styles.projectsSectionHeader}>
 				<div className={styles.generalTitle}>
 					<Typography Component={"h2"} variant={"subtitle"} weight={"bold"} size={"normal"}>

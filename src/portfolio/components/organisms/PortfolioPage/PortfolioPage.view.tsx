@@ -6,16 +6,21 @@ import { ProjectsSectionView } from "../ProjectsSection/ProjectsSection.view";
 
 
 export function PortfolioPageView() {
-	const { activeLanguage, handleLanguageButtonClick } = usePortfolioPageHook();
+	const {
+		activeLanguage,
+		handleLanguageButtonClick,
+		isMobNavOpen,
+		handleMobNavOpen,
+	} = usePortfolioPageHook();
 
 	return (
 		<div className={styles.portfolioPageContainer}>
-			<Header activeLanguage={activeLanguage}/>
+			<Header activeLanguage={activeLanguage} isMobNavOpen={isMobNavOpen} handleMobNavOpen={handleMobNavOpen}/>
 			<Hero activeLanguage={activeLanguage}/>
 			<About activeLanguage={activeLanguage} handleLanguageButtonClick={handleLanguageButtonClick}/>
-			<ProjectsSectionView />
-			<Contact />
-			<Footer />
+			<ProjectsSectionView/>
+			<Contact/>
+			<Footer/>
 		</div>
 	);
 }

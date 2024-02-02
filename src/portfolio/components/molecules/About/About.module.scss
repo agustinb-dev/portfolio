@@ -14,7 +14,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
 .about-container {
     display: flex;
     width: 1440px;
-    margin: functions.spacing(13) auto functions.spacing(15);
+    margin: functions.spacing(20) auto functions.spacing(0);
     position: relative;
     padding-right: functions.spacing(1);
     padding-left: functions.spacing(1);

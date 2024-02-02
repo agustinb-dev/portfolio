@@ -1,5 +1,13 @@
 @use "../../../styles/functions.scss";
 @use "../../../styles/constants.scss";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, "xxl");
+$xl: map.get(constants.$grid-breakpoints, "xl");
+$lg: map.get(constants.$grid-breakpoints, "lg");
+$md: map.get(constants.$grid-breakpoints, "md");
+$sm: map.get(constants.$grid-breakpoints, "sm");
+$xs: map.get(constants.$grid-breakpoints, "xs");
 
 $number-of-nav-li-elements: 3;
 
@@ -9,15 +17,48 @@ $number-of-nav-li-elements: 3;
   align-items: center;
   justify-content: flex-end;
   height: constants.$header-height;
-  padding: functions.spacing(4) functions.spacing(1);
-  margin-left: functions.spacing(13);
-  margin-right: functions.spacing(13);
-  z-index: 12;
+  padding: functions.spacing(4) functions.spacing(13) functions.spacing(4) functions.spacing(1);
+  z-index: 1;
+
+  @media (max-width: $lg) {
+    padding-right: functions.spacing(5);
+  }
+
+  @media (max-width: $md) {
+    padding-right: functions.spacing(3);
+  }
+
+  @media (max-width: $sm) {
+    padding-right: functions.spacing(2);
+  }
+
+  .mobileNavButton {
+    display: none;
+    padding: functions.spacing(0);
+    z-index: 99;
+    align-items: center;
+    transform: rotate(90deg);
+    letter-spacing: 1px;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    @media (max-width: $md) {
+      display: block;
+    }
+  }
+
 
   .navbar {
     display: inline-flex;
     align-items: center;
     line-height: 1.1;
+
+    @media (max-width: $md) {
+      display: none;
+    }
+
 
     & ol {
       list-style: none;
@@ -48,6 +89,36 @@ $number-of-nav-li-elements: 3;
 
     .resume-button {
         margin-left: functions.spacing(1);
+    }
+  }
+
+  .mobile-nav-container {
+    position: absolute;
+    height: 100svh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: constants.$background-dark-theme-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & ol {
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: functions.spacing(4);
+      align-items: center;
+
+      .mobileNavLine {
+        border: 1px solid constants.$text-secondary-dark-theme-color;
+        opacity: 0.8;
+        width: 40%;
+      }
     }
   }
 }
