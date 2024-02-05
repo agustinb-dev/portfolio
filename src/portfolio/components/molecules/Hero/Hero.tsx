@@ -1,5 +1,7 @@
 import React from "react";
 import * as styles from "./Hero.module.scss";
+import cv_en from "../../../../assets/cv_en.pdf";
+import cv_es from "../../../../assets/cv_es.pdf";
 import { AnchorButton, Typography } from "../../atoms";
 import { useViewport } from "react-viewport-hooks";
 
@@ -21,7 +23,7 @@ export function Hero(properties: HeroProperties) {
 					</Typography>
 				</div>
 				<div className={styles.heroButtons}>
-					<AnchorButton href={"/#resume"} size={vw < 768 ? (vw < 475 ? "thin" : "normal") : "large"}>
+					<AnchorButton href={properties.activeLanguage === "en" ? cv_en : cv_es} size={vw < 768 ? (vw < 475 ? "thin" : "normal") : "large"}>
 						<Typography style={"italic"} weight={"semi-bold"} size={vw < 768 ? (vw < 475 ? "extraSmall" : "small") : "normal"}>
 							{properties.activeLanguage === "en" ? "DOWNLOAD CV" : "DESCARGAR CV" }
 						</Typography>
