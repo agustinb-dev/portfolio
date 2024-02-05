@@ -35,18 +35,19 @@ export function About(properties: AboutProperties) {
 					<div className={styles.description}>
 						{properties.activeLanguage === "en" ? (
 							<Typography Component={"p"} variant={"normal"} size={"large"}>
-								Hi!, my name is Agustin Barcia, a self-taught with 26 years old who is passionate about the world of web development.
-								<br/><br/>
-								My orientation is Front-End, focused more than anything on React and Typescript.
+								Hi!, my name is Agustin Barcia, a self-taught with 26 years old who is passionate about the world of web development.<br/><br/>
+								
+								My orientation is Front-End, focused more than anything on TypeScript, React and it's frameworks.
 								I&#39;m motivated to continue learning and gaining experience in the professional
 								field.<br/><br/>
+								
 								I believe that being a developer means not being afraid of challenges and
 								have the ability to continually learn to tackle new projects more efficiently.
 							</Typography>
 						) : (
 							<Typography Component={"p"} variant={"normal"} size={"large"}>
 								Mi nombre es Agustin Barcia, tengo 26 años y soy un autodidacta apasionado en por el mundo del desarrollo web.<br/><br/>
-								Mi orientación es Front-End, centrado más que nada en React y Typescript.
+								Mi orientación es Front-End, centrado más que nada en TypeScript, React y sus frameworks.
 
 								Estoy motivado a seguir aprendiendo y adquiriendo experiencia en el campo profesional.<br/><br/>
 
