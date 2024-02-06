@@ -13,7 +13,8 @@ import { ImageDataLike } from "gatsby-plugin-image";
 export interface Project {
 	imageName: string,
 	title: string,
-	description: string,
+	descriptionES: string,
+	descriptionEN: string,
 	imageSide: string,
 	websiteUrl: string,
 	techIcons: Array<React.ReactNode>,
@@ -55,33 +56,37 @@ export function useProjectsSectionHook() {
 
 	const projects: Project[] = [
 		{
-			imageName: "project1",
+			imageName: "z-economy",
 			title: "Z-Economy",
-			description:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionES:"Ea ueserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionEN: "YNAB Clone which is a comprehensive personal finance software solution based on zero-based budgeting and designed to empower individuals in managing their finances effectively.",
 			imageSide: "left",
 			websiteUrl: "https://waxmotiff.com",
 			techIcons: [<ReactIcon key={1}/>, <TypeScriptIcon key={2}/>, <AxiosIcon key={3}/>, <SassIcon key={4}/>]
 		},
 		{
-			imageName: "project2",
+			imageName: "urlShortener",
 			title: "URL Shortener",
-			description: "Mollit ipsum sfgasdfamollit magna occaecat eiusmod sint fugiat est non adipisicing esse fugiat deserunt minim. Enim occaecat velit eu non amet nostrud officia duis.",
+			descriptionES:"Ea ut non cupidatat consequat sint  cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionEN: "Basic link shortener based on the first eight digits of an uuidv4, it has its own API and database for data persistence.",
 			imageSide: "right",
 			websiteUrl: "https://waxwmotsif.com",
 			techIcons: [<ReactIcon key={1}/>, <TypeScriptIcon key={2}/>, <AxiosIcon key={3}/>, <SassIcon key={4}/>]
 		},
 		{
-			imageName: "project3",
-			title: "URL Shortener Api",
-			description: "Elit est amet quis incididunt officia velit eiusmod do amet. Sint non qui nulla sit ex cillum non pariatur velit proident ut aliqua fugiat incididunt id minim.",
+			imageName: "urls-api",
+			title: "URL Shortener API",
+			descriptionES:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionEN: "API and database for URL shortener data persistence. Made with Nest.Js and PostgreSQL",
 			imageSide: "left",
 			websiteUrl: "https://waxmotsif.com",
 			techIcons: [<NestJsIcon key={1}/>, <TypeScriptIcon key={2}/>, <PostgresSQLIcon key={3}/>]
 		},
 		{
-			imageName: "project4",
+			imageName: "portfolio",
 			title: "Portfolio",
-			description: "Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionES:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionEN: "My portfolio website where I get to show off my skills and the projects I've been working on recently",
 			imageSide: "right",
 			websiteUrl: "https://waxmotsif.com",
 			techIcons: [<GatsbyIcon key={1}/>, <TypeScriptIcon key={2}/>, <SassIcon key={3}/>]

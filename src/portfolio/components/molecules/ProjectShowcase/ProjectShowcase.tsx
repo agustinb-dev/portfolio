@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import * as styles from "./ProjectShowcase.module.scss";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { AnchorButton, Typography } from "../../atoms";
@@ -6,6 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import { useViewport } from "react-viewport-hooks";
 import { Project, StaticQueryResult } from "../../organisms/ProjectsSection/ProjectsSection.hook";
 import { ImageDataLike } from "gatsby-plugin-image/dist/src/components/hooks";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 interface ProjectShowcaseProperties {
 	project: Project;
@@ -13,6 +14,7 @@ interface ProjectShowcaseProperties {
 }
 
 export function ProjectShowcase(properties: ProjectShowcaseProperties) {
+	const { activeLanguage } = useContext(LanguageContext);
 	const image = getImage(properties.data.allFile.edges.find((edge: { node: { name: string; }; }) => edge.node.name === properties.project.imageName)?.node.childImageSharp.gatsbyImageData as ImageDataLike | null);
 	const { vw } = useViewport({});
 	return (
@@ -37,7 +39,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 					</div>
 					<div className={styles.projectDescription}>
 						<Typography variant={"normal"} size={vw < 1280 ? "normal" : "large"}>
-							{properties.project.description}
+							{activeLanguage === "en" ? properties.project.descriptionEN : properties.project.descriptionES}
 						</Typography>
 					</div>
 					<AnchorButton href={properties.project.websiteUrl} size={vw < 1024 ? "small" : "normal"}>
@@ -67,7 +69,7 @@ export function ProjectShowcase(properties: ProjectShowcaseProperties) {
 					</div>
 					<div className={styles.projectDescriptionMobile}>
 						<Typography variant={"normal"} size={"normal"}>
-							{properties.project.description}
+							{activeLanguage === "en" ? properties.project.descriptionEN : properties.project.descriptionES}
 						</Typography>
 					</div>
 					<AnchorButton href={properties.project.websiteUrl} size={"small"}>
