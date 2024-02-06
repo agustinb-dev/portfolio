@@ -1,11 +1,11 @@
 import React from "react";
-import GatsbyIcon from "../../../../assets/gatsby.svg";
-import NestJsIcon from "../../../../assets/nestjs.svg";
-import PostgresSQLIcon from "../../../../assets/postgresSQL.svg";
-import TypeScriptIcon from "../../../../assets/typescript.svg";
-import ReactIcon from "../../../../assets/ReactIcon.svg";
-import SassIcon from "../../../../assets/sass.svg";
-import AxiosIcon from "../../../../assets/axios.svg";
+import GatsbyIcon from "../../../../assets/TechSVGIcons/gatsby.svg";
+import NestJsIcon from "../../../../assets/TechSVGIcons/Nestjs.svg";
+import PostgresSQLIcon from "../../../../assets/TechSVGIcons/PostgresSQL.svg";
+import TypeScriptIcon from "../../../../assets/TechSVGIcons/TypeScript.svg";
+import ReactIcon from "../../../../assets/TechSVGIcons/ReactIcon.svg";
+import SassIcon from "../../../../assets/TechSVGIcons/Sass.svg";
+import AxiosIcon from "../../../../assets/TechSVGIcons/Axios.svg";
 // import MongoDBIcon from "../../../../assets/mongodb.svg";
 import { graphql, useStaticQuery } from "gatsby";
 import { ImageDataLike } from "gatsby-plugin-image";
