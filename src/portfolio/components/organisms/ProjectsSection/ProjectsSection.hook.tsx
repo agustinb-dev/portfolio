@@ -1,8 +1,43 @@
+import React from "react";
+import GatsbyIcon from "../../../../assets/gatsby.svg";
+import NestJsIcon from "../../../../assets/nestjs.svg";
+import PostgresSQLIcon from "../../../../assets/postgresSQL.svg";
+import TypeScriptIcon from "../../../../assets/typescript.svg";
+import ReactIcon from "../../../../assets/ReactIcon.svg";
+import SassIcon from "../../../../assets/sass.svg";
+import AxiosIcon from "../../../../assets/axios.svg";
+// import MongoDBIcon from "../../../../assets/mongodb.svg";
 import { graphql, useStaticQuery } from "gatsby";
+import { ImageDataLike } from "gatsby-plugin-image";
+
+export interface Project {
+	imageName: string,
+	title: string,
+	description: string,
+	imageSide: string,
+	websiteUrl: string,
+	techIcons: Array<React.ReactNode>,
+}
+
+interface FileNode {
+	node: {
+		name: string;
+		relativePath: string;
+		childImageSharp: {
+			gatsbyImageData: ImageDataLike;
+		};
+	};
+}
+
+export interface StaticQueryResult {
+	allFile: {
+		edges: FileNode[];
+	};
+}
 
 export function useProjectsSectionHook() {
 	// noinspection GraphQLUnresolvedReference
-	const data = useStaticQuery(graphql`
+	const data: StaticQueryResult = useStaticQuery(graphql`
         query {
             allFile(filter: {sourceInstanceName: {eq: "ProjectsImages"}}) {
                 edges {
@@ -18,34 +53,38 @@ export function useProjectsSectionHook() {
         }
 	`);
 
-	const projects = [
+	const projects: Project[] = [
 		{
 			imageName: "project1",
-			title: "Wax Motif",
+			title: "Z-Economy",
 			description:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
 			imageSide: "left",
-			websiteUrl: "https://waxmotiff.com"
+			websiteUrl: "https://waxmotiff.com",
+			techIcons: [<ReactIcon key={1}/>, <TypeScriptIcon key={2}/>, <AxiosIcon key={3}/>, <SassIcon key={4}/>]
 		},
 		{
 			imageName: "project2",
-			title: "Draze Force",
+			title: "URL Shortener",
 			description: "Mollit ipsum sfgasdfamollit magna occaecat eiusmod sint fugiat est non adipisicing esse fugiat deserunt minim. Enim occaecat velit eu non amet nostrud officia duis.",
 			imageSide: "right",
-			websiteUrl: "https://waxwmotsif.com"
+			websiteUrl: "https://waxwmotsif.com",
+			techIcons: [<ReactIcon key={1}/>, <TypeScriptIcon key={2}/>, <AxiosIcon key={3}/>, <SassIcon key={4}/>]
 		},
 		{
 			imageName: "project3",
-			title: "Artren",
+			title: "URL Shortener Api",
 			description: "Elit est amet quis incididunt officia velit eiusmod do amet. Sint non qui nulla sit ex cillum non pariatur velit proident ut aliqua fugiat incididunt id minim.",
 			imageSide: "left",
-			websiteUrl: "https://waxmotsif.com"
+			websiteUrl: "https://waxmotsif.com",
+			techIcons: [<NestJsIcon key={1}/>, <TypeScriptIcon key={2}/>, <PostgresSQLIcon key={3}/>]
 		},
 		{
 			imageName: "project4",
-			title: "Platform Pro",
+			title: "Portfolio",
 			description: "Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
 			imageSide: "right",
-			websiteUrl: "https://waxmotsif.com"
+			websiteUrl: "https://waxmotsif.com",
+			techIcons: [<GatsbyIcon key={1}/>, <TypeScriptIcon key={2}/>, <SassIcon key={3}/>]
 		}
 	];
 

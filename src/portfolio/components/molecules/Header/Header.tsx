@@ -73,7 +73,7 @@ export function Header(properties: HeaderProperties) {
 							</Anchor>
 						</li>
 						<li className={styles.mobileNavLine}></li>
-						<AnchorButton href={"/#resume"} className={styles.mobileResumeButton} size={"thin"}>
+						<AnchorButton href={"/#resume"} size={"thin"}>
 							<Typography Component={"span"} weight={"semi-bold"}>
 								{properties.activeLanguage === "en" ? "Resume" : "Curriculum"}
 							</Typography>
