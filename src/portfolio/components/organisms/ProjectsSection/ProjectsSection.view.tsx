@@ -25,12 +25,9 @@ export function ProjectsSectionView() {
 			<div className={styles.projectsContainer}>
 				{projects.map((project) => (
 					<ProjectShowcase
+						project={project}
+						data={data}
 						key={project.title}
-						imageData={data.allFile.edges.find((edge: { node: { name: string; extension: string; }; }) => edge.node.name === project.imageName)?.node.childImageSharp.gatsbyImageData}
-						title={project.title}
-						description={project.description}
-						imageSide={project.imageSide}
-						websiteUrl={project.websiteUrl}
 					/>
 				))}
 			</div>

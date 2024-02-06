@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
 	graphqlTypegen: true,
 	plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
 		{
+			// eslint-disable-next-line sonarjs/no-duplicate-string
 			resolve: "gatsby-source-filesystem",
 			options: {
 				"name": "PortfolioImages",
@@ -35,6 +36,14 @@ const config: GatsbyConfig = {
 				path: "./src/images/ProjectsImages/",
 			},
 			__key: "ProjectsImages",
+		},
+		{
+			resolve: "gatsby-plugin-react-svg",
+			options: {
+				rule: {
+					include: /TechSVGIcons/
+				}
+			}
 		},
 		{
 			resolve: "gatsby-plugin-google-gtag",

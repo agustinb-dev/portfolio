@@ -84,7 +84,19 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
     }
 
     .project-title {
-      margin-bottom: functions.spacing(2);
+      margin-bottom: functions.spacing(3);
+    }
+
+    .project-technologies {
+      display: flex;
+      justify-content: center;
+      gap: functions.spacing(6);
+      margin-bottom: functions.spacing(3);
+      height: 30px;
+
+      & svg {
+        width: constants.$tech-icons-width;
+      }
     }
 
     .project-description {
@@ -135,12 +147,23 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
       max-width: 95%;
     }
 
+    .project-technologies-mobile {
+      display: flex;
+      justify-content: center;
+      gap: functions.spacing(6);
+      margin-bottom: functions.spacing(2);
+      height: 25px;
+
+      & svg {
+        width: constants.$tech-icons-width;
+      }
+    }
+
     .project-description-mobile {
       text-align: center;
       margin-bottom: functions.spacing(3.5);
       letter-spacing: 1px;
       line-height: 1.5;
-
     }
   }
 }
