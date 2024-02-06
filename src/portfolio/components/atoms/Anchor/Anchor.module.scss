@@ -33,6 +33,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
   background-color: constants.$main-color;
   color: constants.$text-light-dark-theme-color;
   border-radius: constants.$radius;
+  text-align: center;
 
   @include mixins.box-shadow;
 
