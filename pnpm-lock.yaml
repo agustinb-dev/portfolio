@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@react-icons/all-files': ^4.1.0
   '@types/node': ^20.11.5
   '@types/react': ^18.2.48
   '@types/react-dom': ^18.2.18
@@ -39,6 +40,7 @@ specifiers:
   typescript: ^5.3.3
 
 dependencies:
+  '@react-icons/all-files': 4.1.0_react@18.2.0
   gatsby: 5.13.3_3lfo6mjrbe7gnpm2z32jgk7g6a
   gatsby-omni-font-loader: 2.0.2_bn6jvakxxs23aoo4tcpxsrb7fy
   gatsby-plugin-google-gtag: 5.13.1_jalhwwxj5frc6yppxfc7dkygpm
@@ -2478,6 +2480,14 @@ packages:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
       config-chain: 1.1.13
+
+  /@react-icons/all-files/4.1.0_react@18.2.0:
+    resolution: {integrity: sha512-hxBI2UOuVaI3O/BhQfhtb4kcGn9ft12RWAFVMUeNjqqhLsHvFtzIkFaptBJpFDANTKoDfdVoHTKZDlwKCACbMQ==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@sideway/address/4.1.4:
     resolution: {integrity: sha512-7vwq+rOHVWjyXxVlR76Agnvhy8I9rpzjosTESvmhNeXOXdZZB15Fl+TI9x1SiHZH5Jv2wTGduSxFDIaq0m3DUw==}
