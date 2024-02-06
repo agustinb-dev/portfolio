@@ -58,7 +58,7 @@ export function useProjectsSectionHook() {
 		{
 			imageName: "z-economy",
 			title: "Z-Economy",
-			descriptionES:"Ea ueserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionES:"Clon de YNAB, software de finanzas personales basado en el presupuesto de base cero y diseñado para permitir a las personas una gestión efectiva de sus finanzas.",
 			descriptionEN: "YNAB Clone which is a comprehensive personal finance software solution based on zero-based budgeting and designed to empower individuals in managing their finances effectively.",
 			imageSide: "left",
 			websiteUrl: "https://waxmotiff.com",
@@ -67,7 +67,7 @@ export function useProjectsSectionHook() {
 		{
 			imageName: "urlShortener",
 			title: "URL Shortener",
-			descriptionES:"Ea ut non cupidatat consequat sint  cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
+			descriptionES:"Link shortener basado en los primeros ocho digitos de un uuidv4, tiene su propia API y base de datos para persistencia de datos.",
 			descriptionEN: "Basic link shortener based on the first eight digits of an uuidv4, it has its own API and database for data persistence.",
 			imageSide: "right",
 			websiteUrl: "https://waxwmotsif.com",
@@ -76,8 +76,8 @@ export function useProjectsSectionHook() {
 		{
 			imageName: "urls-api",
 			title: "URL Shortener API",
-			descriptionES:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
-			descriptionEN: "API and database for URL shortener data persistence. Made with Nest.Js and PostgreSQL",
+			descriptionES:"API y base de datos para permitir la persistencia de datos de la app URL shortener. Hecho con Nest.Js y PostgreSQL.",
+			descriptionEN: "API and database for URL shortener data persistence. Made with Nest.Js and PostgreSQL.",
 			imageSide: "left",
 			websiteUrl: "https://waxmotsif.com",
 			techIcons: [<NestJsIcon key={1}/>, <TypeScriptIcon key={2}/>, <PostgresSQLIcon key={3}/>]
@@ -85,8 +85,8 @@ export function useProjectsSectionHook() {
 		{
 			imageName: "portfolio",
 			title: "Portfolio",
-			descriptionES:"Ea ut non cupidatat consequat sint elit ipsum culpa dolor cillum commodo. Do esse excepteur cillum deserunt duis incididunt. Eu tempor ullamco aliqua consectetur incididunt anim dolor sunt laboris adipisicing cupidatat sint.",
-			descriptionEN: "My portfolio website where I get to show off my skills and the projects I've been working on recently",
+			descriptionES:"Mi portfolio web donde puedo mostrar mis habilidades y los proyectos en los que he estado trabajando recientemente.",
+			descriptionEN: "My portfolio website where I get to show off my skills and the projects I've been working on recently.",
 			imageSide: "right",
 			websiteUrl: "https://waxmotsif.com",
 			techIcons: [<GatsbyIcon key={1}/>, <TypeScriptIcon key={2}/>, <SassIcon key={3}/>]
