@@ -55,21 +55,21 @@ export function Header(properties: HeaderProperties) {
 					<ol>
 						<li>
 							<Anchor href={"/#about"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "About" : "Presentación"}
 								</Typography>
 							</Anchor>
 						</li>
 						<li>
 							<Anchor href={"/#work"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Work" : "Proyectos"}
 								</Typography>
 							</Anchor>
 						</li>
 						<li>
 							<Anchor href={"/#contact"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Contact" : "Contacto"}
 								</Typography>
 							</Anchor>
