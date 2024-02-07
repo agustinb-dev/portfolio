@@ -15,6 +15,9 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
   text-decoration: none;
   color: constants.$text-dark-theme-color;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 
   &:visited {
     color: constants.$text-dark-theme-color;
@@ -62,5 +65,15 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
 
   &:focus-visible {
     color: inherit;
+  }
+}
+
+.anchor-icon-button {
+  padding: 0;
+  color: constants.$main-color;
+  line-height: 0;
+
+  &:visited {
+    color: constants.$main-color;
   }
 }

@@ -9,6 +9,7 @@ declare module "*.pdf" {
 }
 
 declare module "*.svg" {
-    const content: any;
+    import { JSX } from "react";
+    const content: JSX;
     export default content;
 }

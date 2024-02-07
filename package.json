@@ -20,6 +20,7 @@
     "lint:style:fix": "stylelint \"**/*.scss\" --fix"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "gatsby": "^5.13.2",
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-google-gtag": "^5.13.1",

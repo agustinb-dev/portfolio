@@ -3,6 +3,7 @@ import * as styles from "./Header.module.scss";
 import cv_en from "../../../../assets/cv_en.pdf";
 import cv_es from "../../../../assets/cv_es.pdf";
 import { Anchor, AnchorButton, ButtonSquare, Typography } from "../../atoms";
+import { SocialList } from "../SocialList/SocialList";
 
 interface HeaderProperties {
 	activeLanguage: string;
@@ -12,6 +13,7 @@ interface HeaderProperties {
 export function Header(properties: HeaderProperties) {
 	return (
 		<header className={styles.header}>
+			<SocialList />
 			<nav className={styles.navbar}>
 				<ol>
 					<li>
@@ -53,21 +55,21 @@ export function Header(properties: HeaderProperties) {
 					<ol>
 						<li>
 							<Anchor href={"/#about"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "About" : "Presentación"}
 								</Typography>
 							</Anchor>
 						</li>
 						<li>
 							<Anchor href={"/#work"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Work" : "Proyectos"}
 								</Typography>
 							</Anchor>
 						</li>
 						<li>
 							<Anchor href={"/#contact"} onClick={() => properties.handleMobNavOpen()}>
-								<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
+								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Contact" : "Contacto"}
 								</Typography>
 							</Anchor>
