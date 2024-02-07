@@ -95,7 +95,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
       height: 30px;
 
       @media (max-width: $md) {
-        //height: 25px;
+        height: 25px;
       }
 
       & svg {
