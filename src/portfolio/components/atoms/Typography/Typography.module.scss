@@ -68,6 +68,18 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
     @media (max-width: $sm) {
       @include mixins.font-size-variant(2);
     }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(1.75);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(1.4);
+    }
+
+    &.style-italic {
+      font-style: italic;
+    }
   }
 
   &.variant-title {
