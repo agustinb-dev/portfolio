@@ -1,0 +1,14 @@
+@use "../../../styles/functions.scss";
+
+.social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: functions.spacing(5);
+  left: functions.spacing(2.5);
+
+  & li {
+    margin-bottom: functions.spacing(3);
+  }
+}
