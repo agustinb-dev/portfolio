@@ -9,19 +9,28 @@ export function SocialList() {
 	return (
 		<ul className={styles.socialList}>
 			<li>
-				<AnchorIconButton href={"https://github.com/agustinb-dev"}>
-					<FaGithub size={20}/>
-				</AnchorIconButton>
+				<div className={styles.socialBox}>
+					<AnchorIconButton href={"https://github.com/agustinb-dev"}>
+						<FaGithub size={20}/>
+					</AnchorIconButton>
+					<span>GitHub</span>
+				</div>
 			</li>
 			<li>
-				<AnchorIconButton href={"https://www.linkedin.com/in/agustin-barcia-845b8a298/"}>
-					<FaLinkedin size={20}/>
-				</AnchorIconButton>
+				<div className={styles.socialBox}>
+					<AnchorIconButton href={"https://www.linkedin.com/in/agustin-barcia-845b8a298/"}>
+						<FaLinkedin size={20}/>
+					</AnchorIconButton>
+					<span>Linkedin</span>
+				</div>
 			</li>
 			<li>
-				<AnchorIconButton href={"https://www.instagram.com/eternallydie/"}>
-					<AiFillInstagram size={20}/>
-				</AnchorIconButton>
+				<div className={styles.socialBox}>
+					<AnchorIconButton href={"https://www.instagram.com/eternallydie/"}>
+						<AiFillInstagram size={20}/>
+					</AnchorIconButton>
+					<span>Instagram</span>
+				</div>
 			</li>
 		</ul>
 	);

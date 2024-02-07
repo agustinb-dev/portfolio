@@ -71,6 +71,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
 .anchor-icon-button {
   padding: 0;
   color: constants.$main-color;
+  line-height: 0;
 
   &:visited {
     color: constants.$main-color;
