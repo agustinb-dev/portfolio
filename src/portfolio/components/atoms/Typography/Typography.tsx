@@ -3,36 +3,35 @@ import * as styles from "./Typography.module.scss";
 import cls from "classnames";
 
 interface TypographyProperties {
-	size: "small" | "normal" | "large";
+	size: "extraSmall" | "small" | "normal" | "large";
 	Component: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span";
-	variant?: "normal" | "title";
+	variant?: "normal" | "subtitle" | "title" | "info";
 	style: "normal" | "italic";
-	weight?: "normal" | "bold" | "semi-bold";
+	weight?: "normal" | "medium" | "bold" | "semi-bold";
+	className?: string;
 }
 
-export function Typography({ Component, size, variant, children, style, weight }: PropsWithChildren<TypographyProperties>) {
+export function Typography({ Component, size, variant, children, style, weight, className }: PropsWithChildren<TypographyProperties>) {
 	const variantStyles = {
 		[styles.variantNormal]: variant === "normal",
+		[styles.variantSubtitle]: variant === "subtitle",
 		[styles.variantTitle]: variant === "title",
+		[styles.variantInfo]: variant === "info",
 	};
 	
 	const styleStyles = {
-		[styles.styleNormal]: style === "normal",
 		[styles.styleItalic]: style === "italic",
 	};
 
 	const weightStyles = {
 		[styles.weightNormal]: weight === "normal",
+		[styles.weightMedium]: weight === "medium",
 		[styles.weightSemiBold]: weight === "semi-bold",
 		[styles.weightBold]: weight === "bold",
 	};
 
-	console.log(styleStyles);
-
-	console.log(variantStyles);
-
 	return (
-		<Component className={cls(styles.typography, `${Object.keys(variantStyles).find(key => variantStyles[key])}`, styles[size], `${Object.keys(styleStyles).find(key => styleStyles[key])}`, `${Object.keys(weightStyles).find(key => weightStyles[key])}`)}>
+		<Component className={cls(styles.typography, className, `${Object.keys(variantStyles).find(key => variantStyles[key])}`, styles[size], `${Object.keys(styleStyles).find(key => styleStyles[key])}`, `${Object.keys(weightStyles).find(key => weightStyles[key])}`)}>
 			{children}
 		</Component>
 	);

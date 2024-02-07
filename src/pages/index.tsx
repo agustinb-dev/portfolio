@@ -4,11 +4,14 @@ import "normalize.css";
 import "../portfolio/styles/app.scss";
 import type { HeadFC, PageProps } from "gatsby";
 import { Portfolio } from "./Portfolio";
+import { LanguageContextProvider } from "../portfolio/context/LanguageContextProvider";
 
 const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<main className={styles.main}>
-			<Portfolio />
+			<LanguageContextProvider>
+				<Portfolio/>
+			</LanguageContextProvider>
 		</main>
 	);
 };

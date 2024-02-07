@@ -1,16 +1,85 @@
 @use "../../../styles/mixins.scss";
+@use "../../../styles/constants.scss";
+@use "sass:map";
+
+$xxl: map.get(constants.$grid-breakpoints, xxl);
+$xl: map.get(constants.$grid-breakpoints, xl);
+$lg: map.get(constants.$grid-breakpoints, lg);
+$md: map.get(constants.$grid-breakpoints, md);
+$sm: map.get(constants.$grid-breakpoints, sm);
+$xs: map.get(constants.$grid-breakpoints, xs);
+$xxs: map.get(constants.$grid-breakpoints, xxs);
 
 .typography {
   margin: 0;
 
   &.variant-normal {
+    @include mixins.font-size-variant(1);
+
+    &.style-italic {
+      font-style: italic;
+    }
+
+    @include mixins.font-weights;
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(0.9);
+    }
+
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(0.8);
+    }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(0.7);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(0.6);
+    }
+  }
+
+  &.variant-info {
     @include mixins.font-size-variant(0.85);
 
     &.style-italic {
       font-style: italic;
     }
 
-    @include mixins.font-weights();
+    @include mixins.font-weights;
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(0.8);
+    }
+
+    @media (max-width: $sm + 64) {
+      @include mixins.font-size-variant(0.7);
+    }
+  }
+
+  &.variant-subtitle {
+    @include mixins.font-size-variant(3);
+    @include mixins.font-weights;
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(2.5);
+    }
+
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(2);
+    }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(1.75);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(1.4);
+    }
+
+    &.style-italic {
+      font-style: italic;
+    }
   }
 
   &.variant-title {
@@ -20,6 +89,22 @@
       font-style: italic;
     }
 
-    @include mixins.font-weights();
+    @include mixins.font-weights;
+
+    @media (max-width: $md) {
+      @include mixins.font-size-variant(3.3);
+    }
+
+    @media (max-width: $sm) {
+      @include mixins.font-size-variant(2.5);
+    }
+
+    @media (max-width: $xs) {
+      @include mixins.font-size-variant(1.75);
+    }
+
+    @media (max-width: $xxs) {
+      @include mixins.font-size-variant(1.4);
+    }
   }
 }

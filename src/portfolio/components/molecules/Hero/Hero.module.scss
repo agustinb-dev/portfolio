@@ -1,6 +1,9 @@
 @use "../../../styles/constants.scss";
 @use "../../../styles/mixins.scss";
 @use "../../../styles/functions.scss";
+@use "sass:map";
+
+$xs: map.get(constants.$grid-breakpoints, xs);
 
 .hero-container {
     display: flex;
@@ -9,6 +12,7 @@
     justify-content: center;
     height: 100svh;
     margin-top: -(constants.$header-height);
+    white-space: nowrap;
 
     &:nth-child(1) {
         line-height: 1.1;
@@ -26,9 +30,16 @@
         margin-top: functions.spacing(1);
         display: flex;
 
+        @media (max-width: $xs) {
+            margin-top: functions.spacing(0.5);
+        }
+
         & a {
             margin: functions.spacing(0.625);
-            padding: functions.spacing(1.25);
+
+            @media (max-width: $xs) {
+                margin: functions.spacing(0.3);
+            }
         }
     }
 }
