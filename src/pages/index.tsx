@@ -3,7 +3,7 @@ import * as styles from "../portfolio/templates/main.module.scss";
 import "normalize.css";
 import "../portfolio/styles/app.scss";
 import type { HeadFC, PageProps } from "gatsby";
-import { Portfolio } from "./Portfolio";
+import Portfolio from "./Portfolio";
 import { LanguageContextProvider } from "../portfolio/context/LanguageContextProvider";
 
 const IndexPage: React.FC<PageProps> = () => {
