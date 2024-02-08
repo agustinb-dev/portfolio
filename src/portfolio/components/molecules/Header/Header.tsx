@@ -16,21 +16,21 @@ export function Header(properties: HeaderProperties) {
 			<SocialList />
 			<nav className={styles.navbar}>
 				<ol>
-					<li>
+					<li key={"about"}>
 						<Anchor href={"/#about"}>
 							<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
 								{properties.activeLanguage === "en" ? "About" : "Presentación"}
 							</Typography>
 						</Anchor>
 					</li>
-					<li>
+					<li key={"work"}>
 						<Anchor href={"/#work"}>
 							<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
 								{properties.activeLanguage === "en" ? "Work" : "Proyectos"}
 							</Typography>
 						</Anchor>
 					</li>
-					<li>
+					<li key={"contact"}>
 						<Anchor href={"/#contact"}>
 							<Typography weight={"semi-bold"} Component={"span"} variant={"info"}>
 								{properties.activeLanguage === "en" ? "Contact" : "Contacto"}
@@ -53,28 +53,28 @@ export function Header(properties: HeaderProperties) {
 			{properties.isMobNavOpen &&
 				<nav className={styles.mobileNavContainer}>
 					<ol>
-						<li>
+						<li key={"aboutMobile"}>
 							<Anchor href={"/#about"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "About" : "Presentación"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li>
+						<li key={"workMobile"}>
 							<Anchor href={"/#work"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Work" : "Proyectos"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li>
+						<li key={"contactMobile"}>
 							<Anchor href={"/#contact"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Contact" : "Contacto"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li className={styles.mobileNavLine}></li>
+						<li className={styles.mobileNavLine} key={"resumeMobile"}></li>
 						<AnchorButton href={"/#resume"} size={"thin"}>
 							<Typography Component={"span"} weight={"semi-bold"}>
 								{properties.activeLanguage === "en" ? "Resume" : "Curriculum"}
