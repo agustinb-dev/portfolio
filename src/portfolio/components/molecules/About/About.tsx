@@ -46,9 +46,9 @@ export function About(properties: AboutProperties) {
 							</Typography>
 						) : (
 							<Typography Component={"p"} variant={"normal"} size={"large"}>
-								Mi nombre es Agustin Barcia, tengo 26 años y soy un autodidacta apasionado en por el mundo del desarrollo web.<br/><br/>
-								Mi orientación es Front-End, centrado más que nada en React y TypeScript.
+								Hola! ,mi nombre es Agustin Barcia, tengo 26 años y soy un autodidacta apasionado por el mundo del desarrollo web.<br/><br/>
 
+								Mi orientación es Front-End, centrado más que nada en React y TypeScript.
 								Estoy motivado a seguir aprendiendo y adquiriendo experiencia en el campo profesional.<br/><br/>
 
 								Creo que ser un desarrollador significa no tener miedo a los desafíos y tener la
