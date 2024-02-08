@@ -6,15 +6,22 @@ interface Properties {
 }
 
 export function LanguageContextProvider(properties: Properties ) {
-	const initialLanguage = (localStorage.getItem("language") || navigator.language.slice(0, 2)) || "en";
-	const [activeLanguage, setActiveLanguage] = useState<string>(initialLanguage);
+
+	// TODO: Change for i18n implementation.
+	const isBrowser = typeof window !== "undefined";
+	const initialLanguage = isBrowser && (localStorage.getItem("language") || navigator.language.slice(0, 2)) || "en";
+	const [activeLanguage, setActiveLanguage] = useState<string>("en");
 
 	const updateLanguageState = (newState: string) => {
 		setActiveLanguage(newState);
 	};
 
 	useEffect(() => {
-		localStorage.setItem("language", activeLanguage);
+		updateLanguageState(initialLanguage);
+	}, []);
+
+	useEffect(() => {
+		isBrowser && localStorage.setItem("language", activeLanguage);
 	}, [activeLanguage]);
 
 	return (
