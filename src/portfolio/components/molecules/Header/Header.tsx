@@ -53,28 +53,28 @@ export function Header(properties: HeaderProperties) {
 			{properties.isMobNavOpen &&
 				<nav className={styles.mobileNavContainer}>
 					<ol>
-						<li key={"about"}>
+						<li key={"aboutMobile"}>
 							<Anchor href={"/#about"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "About" : "Presentación"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li key={"work"}>
+						<li key={"workMobile"}>
 							<Anchor href={"/#work"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Work" : "Proyectos"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li key={"contact"}>
+						<li key={"contactMobile"}>
 							<Anchor href={"/#contact"} onClick={() => properties.handleMobNavOpen()}>
 								<Typography weight={"semi-bold"} Component={"span"} variant={"info"} size={"large"}>
 									{properties.activeLanguage === "en" ? "Contact" : "Contacto"}
 								</Typography>
 							</Anchor>
 						</li>
-						<li className={styles.mobileNavLine} key={"resume"}></li>
+						<li className={styles.mobileNavLine} key={"resumeMobile"}></li>
 						<AnchorButton href={"/#resume"} size={"thin"}>
 							<Typography Component={"span"} weight={"semi-bold"}>
 								{properties.activeLanguage === "en" ? "Resume" : "Curriculum"}
