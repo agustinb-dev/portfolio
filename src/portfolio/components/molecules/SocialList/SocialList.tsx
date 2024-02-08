@@ -8,7 +8,7 @@ import { AiFillInstagram } from "@react-icons/all-files/ai/AiFillInstagram";
 export function SocialList() {
 	return (
 		<ul className={styles.socialList}>
-			<li>
+			<li key={"github"}>
 				<div className={styles.socialBox}>
 					<AnchorIconButton href={"https://github.com/agustinb-dev"}>
 						<FaGithub size={20}/>
@@ -16,7 +16,7 @@ export function SocialList() {
 					<span>GitHub</span>
 				</div>
 			</li>
-			<li>
+			<li key={"linkedin"}>
 				<div className={styles.socialBox}>
 					<AnchorIconButton href={"https://www.linkedin.com/in/agustin-barcia-845b8a298/"}>
 						<FaLinkedin size={20}/>
@@ -24,7 +24,7 @@ export function SocialList() {
 					<span>Linkedin</span>
 				</div>
 			</li>
-			<li>
+			<li key={"instagram"}>
 				<div className={styles.socialBox}>
 					<AnchorIconButton href={"https://www.instagram.com/eternallydie/"}>
 						<AiFillInstagram size={20}/>
