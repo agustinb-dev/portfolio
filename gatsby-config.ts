@@ -11,6 +11,9 @@ const gatsbyRequiredRules = path.join(
 );
 
 const config: GatsbyConfig = {
+	flags: {
+		DEV_SSR: true
+	},
 	siteMetadata: {
 		title: "Portfolio",
 		siteUrl: "https://www.yourdomain.tld"
