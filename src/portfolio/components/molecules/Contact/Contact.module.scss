@@ -27,6 +27,7 @@ $xxs: map.get(constants.$grid-breakpoints, xxs);
     text-align: center;
     margin-top: functions.spacing(5);
     margin-bottom: functions.spacing(5);
+    line-height: 1.4;
 
     @media (max-width: $lg) {
       max-width: $xs;
