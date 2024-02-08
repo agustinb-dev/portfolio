@@ -15,7 +15,7 @@ export function usePortfolioPageHook() {
 	const handleMobNavOpen = () => {
 		const page = document.querySelector("#portfolioPage") as HTMLElement;
 		setIsMobNavOpen(!isMobNavOpen);
-		isMobNavOpen ? page.style.overflow = "auto" : page.style.overflow = "hidden";
+		isMobNavOpen ? page.style.overflow = "hidden auto" : page.style.overflow = "hidden";
 	};
 
 	return {
