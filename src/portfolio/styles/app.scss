@@ -1,4 +1,7 @@
 @use "constants.scss";
+@use "sass:map";
+
+$xs: map.get(constants.$grid-breakpoints, xs);
 
 html,
 body {
@@ -14,6 +17,10 @@ body {
 
 ::-webkit-scrollbar{
   width: constants.$scrollbar-width;
+
+  @media (max-width: $xs){
+    width: constants.$scrollbar-width-mobile;
+  }
 }
 
 ::-webkit-scrollbar-thumb{
