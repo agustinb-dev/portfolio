@@ -67,12 +67,12 @@ export function About(properties: AboutProperties) {
 							<ul>
 								<li><Typography Component={"span"} size={"large"}>JavaScript (ES6+)</Typography></li>
 								<li><Typography Component={"span"} size={"large"}>React</Typography></li>
-								<li><Typography Component={"span"} size={"large"}>Node.Js</Typography></li>
+								<li><Typography Component={"span"} size={"large"}>SASS</Typography></li>
 							</ul>
 							<ul>
-								<li><Typography Component={"span"} size={"large"}>Typescript</Typography></li>
-								<li><Typography Component={"span"} size={"large"}>SCSS</Typography></li>
-								<li><Typography Component={"span"} size={"large"}>Nest.Js</Typography></li>
+								<li><Typography Component={"span"} size={"large"}>TypeScript</Typography></li>
+								<li><Typography Component={"span"} size={"large"}>Node</Typography></li>
+								<li><Typography Component={"span"} size={"large"}>Nest</Typography></li>
 							</ul>
 						</div>
 					</div>
