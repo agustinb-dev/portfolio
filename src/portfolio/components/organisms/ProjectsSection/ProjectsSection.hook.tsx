@@ -70,7 +70,7 @@ export function useProjectsSectionHook() {
 			descriptionES:"Link shortener basado en los primeros ocho digitos de un uuidv4, tiene su propia API y base de datos para persistencia de datos.",
 			descriptionEN: "Basic link shortener based on the first eight digits of an uuidv4, it has its own API and database for data persistence.",
 			imageSide: "right",
-			websiteUrl: "https://urls-server.vercel.app/url",
+			websiteUrl: "https://ursl.vercel.app",
 			techIcons: [<ReactIcon key={1}/>, <TypeScriptIcon key={2}/>, <AxiosIcon key={3}/>, <SassIcon key={4}/>]
 		},
 		{
