@@ -19,7 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage;
 
 export const Head: HeadFC = () => {return (
-	<title>Portfolio</title>
+	<title>Agustín Barcia</title>
 );};
 
 
